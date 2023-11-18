@@ -113,7 +113,7 @@ def generate(image1, video, textbox_in, first_run, state, state_, images_tensor)
     if flag:
         state.append_message(state.roles[0], textbox_in + "\n" + show_images)
     state.append_message(state.roles[1], textbox_out)
-
+    torch.cuda.empty_cache()
     return (state, state_, state.to_gradio_chatbot(), False, gr.update(value=None, interactive=True), images_tensor, gr.update(value=image1 if os.path.exists(image1) else None, interactive=True), gr.update(value=video if os.path.exists(video) else None, interactive=True))
 
 def regenerate(state, state_):
@@ -233,16 +233,80 @@ with gr.Blocks(title='Video-LLaVA🚀', theme=gr.themes.Default(), css=block_css
                     "Why is this video funny?",
                 ],
                 [
-                    f"{cur_dir}/examples/sample_demo_3.mp4",
-                    "Can you identify any safety hazards in this video?"
+                    f"{cur_dir}/examples/sample_demo_2.mp4",
+                    "what is strange about this video?",
                 ],
                 [
-                    f"{cur_dir}/examples/sample_demo_9.mp4",
+                    f"{cur_dir}/examples/sample_demo_3.mp4",
+                    "Can you identify any safety hazards in this video?",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_4.mp4",
+                    "what is unusual about this video?",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_6.mp4",
+                    "Can you write a short poem inspired fom the video.",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_7.mp4",
+                    "Create a short fairy tale with a moral lesson inspired by the video.",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_8.mp4",
+                    "Where is this video taken from? What place/landmark is shown in the video?",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_10.mp4",
+                    "Describe the video in detail.",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_11.mp4",
+                    "What is the main focus of the video.",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_12.mp4",
+                    "What does the woman use to split the logs and how does she do it?",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_13.mp4",
                     "Describe the video.",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_14.mp4",
+                    "What is the video about?",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_15.mp4",
+                    "What is the main challenge faced by the people on the boat?",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_17.mp4",
+                    "What activities are the woman and the dog engaged in the video?",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_18.mp4",
+                    "Describe the video in detail.",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_19.mp4",
+                    "What is the video about?",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_20.mp4",
+                    "Can you describe the process for cleaning a screen window as demonstrated in the video?",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_21.mp4",
+                    "Step-by-step describe the cooking recipe shown in the video.",
                 ],
                 [
                     f"{cur_dir}/examples/sample_demo_22.mp4",
                     "Describe the activity in the video.",
+                ],
+                [
+                    f"{cur_dir}/examples/sample_demo_23.mp4",
+                    "Briefly describe the video.",
                 ],
             ],
             inputs=[video, textbox],
