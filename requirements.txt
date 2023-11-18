@@ -2,7 +2,6 @@
 pip
 einops
 fastapi
-gradio==3.37.0
 markdown2[all]
 numpy
 requests
@@ -23,7 +22,8 @@ sentencepiece==0.1.99
 einops==0.6.1
 einops-exts==0.0.4
 timm==0.6.13
-gradio_client==0.7.0
 decord==0.6.0
 opencv-python==4.7.0.72
 pytorchvideo @ git+https://github.com/facebookresearch/pytorchvideo.git@28fe037d212663c6a24f373b94cc5d478c8c1a1d
+gradio==3.37.0
+gradio_client==0.7.0
