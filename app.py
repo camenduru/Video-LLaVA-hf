@@ -60,6 +60,8 @@ def generate(image1, video, textbox_in, first_run, state, state_, images_tensor)
         tensor = tensor.to(handler.model.device, dtype=dtype)
         images_tensor[0] = images_tensor[0] + [tensor]
         images_tensor[1] = images_tensor[1] + ['image']
+        print(torch.cuda.memory_allocated())
+        print(torch.cuda.max_memory_allocated())
     video_processor = handler.video_processor
     if not os.path.exists(image1) and os.path.exists(video):
         tensor = video_processor(video, return_tensors='pt')['pixel_values'][0]
@@ -67,6 +69,8 @@ def generate(image1, video, textbox_in, first_run, state, state_, images_tensor)
         tensor = tensor.to(handler.model.device, dtype=dtype)
         images_tensor[0] = images_tensor[0] + [tensor]
         images_tensor[1] = images_tensor[1] + ['video']
+        print(torch.cuda.memory_allocated())
+        print(torch.cuda.max_memory_allocated())
     if os.path.exists(image1) and os.path.exists(video):
         tensor = video_processor(video, return_tensors='pt')['pixel_values'][0]
         # print(tensor.shape)
@@ -80,6 +84,8 @@ def generate(image1, video, textbox_in, first_run, state, state_, images_tensor)
         tensor = tensor.to(handler.model.device, dtype=dtype)
         images_tensor[0] = images_tensor[0] + [tensor]
         images_tensor[1] = images_tensor[1] + ['image']
+        print(torch.cuda.memory_allocated())
+        print(torch.cuda.max_memory_allocated())
         
 
 
@@ -138,6 +144,9 @@ handler = Chat(model_path, conv_mode=conv_mode, load_8bit=load_8bit, load_4bit=l
 # handler.model.to(dtype=dtype)
 if not os.path.exists("temp"):
     os.makedirs("temp")
+
+print(torch.cuda.memory_allocated())
+print(torch.cuda.max_memory_allocated())
 
 app = FastAPI()
 
