@@ -105,7 +105,7 @@ class Chat:
         else:
             input_ids = tokenizer_X_token(prompt, tokenizer, X_TOKEN_INDEX['IMAGE'], return_tensors='pt').unsqueeze(0).to(self.device)
         
-        temperature = 0.2
+        temperature = 0.1
         
         max_new_tokens = 1024
 
