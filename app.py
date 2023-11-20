@@ -177,10 +177,6 @@ with gr.Blocks(title='Video-LLaVA🚀', theme=gr.themes.Default(), css=block_css
                         "What are the things I should be cautious about when I visit here?",
                     ],
                     [
-                        f"{cur_dir}/examples/glove.jpg",
-                        "What happens when the glove drops?",
-                    ],
-                    [
                         f"{cur_dir}/examples/desert.jpg",
                         "If there are factual errors in the questions, point it out; if not, proceed answering the question. What’s happening in the desert?",
                     ],
@@ -189,7 +185,7 @@ with gr.Blocks(title='Video-LLaVA🚀', theme=gr.themes.Default(), css=block_css
             )
 
         with gr.Column(scale=7):
-            chatbot = gr.Chatbot(label="Video-LLaVA", bubble_full_width=True).style(height=850)
+            chatbot = gr.Chatbot(label="Video-LLaVA", bubble_full_width=True).style(height=750)
             with gr.Row():
                 with gr.Column(scale=8):
                     textbox.render()
