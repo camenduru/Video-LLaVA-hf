@@ -9,7 +9,7 @@ from llava.utils import disable_torch_init
 title_markdown = ("""
 <div style="display: flex; justify-content: center; align-items: center; text-align: center;">
   <a href="https://github.com/PKU-YuanGroup/LanguageBind" style="margin-right: 20px; text-decoration: none; display: flex; align-items: center;">
-    <img src="https://z1.ax1x.com/2023/11/07/pil4sqH.png" alt="LanguageBind🚀" style="max-width: 120px; height: auto;">
+    <img src="https://z1.ax1x.com/2023/11/07/pil4sqH.png" alt="Video-LLaVA🚀" style="max-width: 120px; height: auto;">
   </a>
   <div>
     <h1 >Video-LLaVA: Improved LLaVA with United Visual Representation</h1>
@@ -20,9 +20,9 @@ title_markdown = ("""
 
 <div align="center">
     <div style="display:flex; gap: 0.25rem;" align="center">
-        <a href='https://github.com/PKU-YuanGroup/LanguageBind'><img src='https://img.shields.io/badge/Github-Code-blue'></a>
-        <a href="https://arxiv.org/pdf/2310.01852.pdf"><img src="https://img.shields.io/badge/Arxiv-2310.01852-red"></a>
-        <a href='https://github.com/PKU-YuanGroup/LanguageBind/stargazers'><img src='https://img.shields.io/github/stars/PKU-YuanGroup/LanguageBind.svg?style=social'></a>
+        <a href='https://github.com/PKU-YuanGroup/Video-LLaVA'><img src='https://img.shields.io/badge/Github-Code-blue'></a>
+        <a href="https://arxiv.org/pdf/2311.10122.pdf"><img src="https://img.shields.io/badge/Arxiv-2311.10122-red"></a>
+        <a href='https://github.com/PKU-YuanGroup/Video-LLaVA/stargazers'><img src='https://img.shields.io/github/stars/PKU-YuanGroup/Video-LLaVA.svg?style=social'></a>
     </div>
 </div>
 """)
