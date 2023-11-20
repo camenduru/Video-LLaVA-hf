@@ -8,11 +8,11 @@ from llava.utils import disable_torch_init
 
 title_markdown = ("""
 <div style="display: flex; justify-content: center; align-items: center; text-align: center;">
-  <a href="https://github.com/PKU-YuanGroup/LanguageBind" style="margin-right: 20px; text-decoration: none; display: flex; align-items: center;">
+  <a href="https://github.com/PKU-YuanGroup/Video-LLaVA" style="margin-right: 20px; text-decoration: none; display: flex; align-items: center;">
     <img src="https://z1.ax1x.com/2023/11/07/pil4sqH.png" alt="Video-LLaVA🚀" style="max-width: 120px; height: auto;">
   </a>
   <div>
-    <h1 >Video-LLaVA: Improved LLaVA with United Visual Representation</h1>
+    <h1 >Video-LLaVA: Video-LLaVA: Learning United Visual Representation by Alignment Before Projection</h1>
     <h5 style="margin: 0;">If you like our project, please give us a star ✨ on Github for the latest update.</h5>
   </div>
 </div>
