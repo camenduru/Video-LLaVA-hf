@@ -264,7 +264,7 @@ with gr.Blocks(title='Video-LLaVA🚀', theme=gr.themes.Default(), css=block_css
                     [image1, video, textbox, first_run, state, state_, chatbot, images_tensor])
 
 # app = gr.mount_gradio_app(app, demo, path="/")
-demo.launch()
+demo.launch(share=True)
 
 
 # uvicorn llava.serve.gradio_web_server:app
