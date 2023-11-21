@@ -772,7 +772,7 @@ class LanguageBindVideo(CLIPPreTrainedModel):
 
         # Initialize weights and apply final processing
         self.post_init()
-        self.convert_to_lora()  ############################################
+        # self.convert_to_lora()  ############################################
         # self.resize_pos(self.vision_model.embeddings, vision_config)
 
     def convert_to_lora(self):
